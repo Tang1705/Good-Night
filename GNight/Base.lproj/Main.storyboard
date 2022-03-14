@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mSn-6G-JaN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WKDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwy-x3-puF">
+                                <rect key="frame" x="186" y="438" width="42" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" label="佳旭"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVK-hn-XhS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jwy-x3-puF" secondAttribute="trailing" id="K8C-hg-3Pd"/>
+                            <constraint firstItem="qVK-hn-XhS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QKI-If-kyU"/>
+                            <constraint firstItem="qVK-hn-XhS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RDz-br-Vha"/>
+                            <constraint firstItem="qVK-hn-XhS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Yt6-2t-OvK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jwy-x3-puF" secondAttribute="bottom" constant="403.5" id="f42-Rw-S3e"/>
+                            <constraint firstAttribute="bottom" secondItem="qVK-hn-XhS" secondAttribute="bottom" id="jXU-zi-SGx"/>
+                            <constraint firstItem="jwy-x3-puF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="kfG-V4-4Gu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hu4-S7-jNw"/>
+                    <connections>
+                        <outlet property="myLabel" destination="jwy-x3-puF" id="UBp-7t-jD9"/>
+                        <outlet property="webView" destination="qVK-hn-XhS" id="ZmO-Wt-VOr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530.43478260869574" y="-424.55357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Edm-xV-t7D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mSn-6G-JaN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lfU-iw-9ed">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Fp-hE-NBg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ckd-cY-Xfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1442.0289855072465" y="-425.22321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
