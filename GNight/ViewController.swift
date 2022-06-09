@@ -12,18 +12,27 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var myLabel: UILabel!
     let isAllowZoom: Bool = true
+    
+    override func loadView() {
+          let webConfiguration = WKWebViewConfiguration()
+          webConfiguration.allowsInlineMediaPlayback = true
+          webConfiguration.allowsInlineMediaPlayback = true
+          webView = WKWebView(frame: .zero, configuration: webConfiguration)
+          webView.uiDelegate = self
+          view = webView
+      }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        let url = URL(string: "https://music.tang5618.com/")
+//        let url = URL(string: "https://music.tang5618.com/")
+        let url = URL(string: "https://music.tang5618.com/ipad/")
     
         let request = URLRequest(url: url!)
         //加载请求
         webView.load(request)
         webView.navigationDelegate = self
-        
     }
 
     
